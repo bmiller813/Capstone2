@@ -13,7 +13,7 @@ const navURLs = [
 function navLink(item){
     document.createElement("a")
     a.href = item.url;
-    a.innerHTML = item.name;
+     a.innerHTML = item.name;
     return a;
 }
 document.addEventListener("DOMContentLoaded", () => {

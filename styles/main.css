@@ -1,13 +1,39 @@
 /* This is for the JS navbar...  come back later*/
-body{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+body {
+    padding: 1em;
+    background-color: skyblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-nav a{
-    text-decoration:none;
+
+nav {
+    display: block;
+    margin: 1em;
+}
+
+nav a {
+    text-decoration: none;
     background-color: darkolivegreen;
     color: goldenrod;
     font-size: 2em;
     padding: 1em;
     margin-right: 3px;
     border-radius: 0.25em;
-} 
+    display: inline-block;
+}
+
+.card {
+    margin: 3px 9px 9px 3px;
+    padding: 6px;
+    border-radius: 0.5rem;
+    width: 320px;
+    height: 100px;
+    min-height: 80px;
+    display: inline-flex;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+.card img{
+    width:100;
+    object-fit: contain;
+    border-radius: 0.19px;
+    border: 1px inset;
+}
