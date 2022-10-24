@@ -1,0 +1,70 @@
+body{
+    font-size: 2vh;
+}
+.menuBtn{
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+#menuBar1, #menuBar2, #menuBar3{
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change #menuBar1{
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change #menuBar2{
+    opacity: 0;
+}
+.change #menuBar3{
+    transform: translate(0, -11px) rotate(45deg);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+   /*font-size: 1rem;*/
+   color: black;
+   
+}
+.nav-item a{
+    margin-right: 15px;
+    margin-left: 15px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.nav-link:hover{
+    color:crimson;
+}
+.far, .subtitle{
+    color: black;
+}
+.far:hover, .subtitle:hover{
+    color: crimson;
+}
+.main{
+    background-image: url("https://cdn.shopify.com/s/files/1/0252/6455/4029/articles/Muir_Woods_Naitonal_Monument_Banner_Small_1c758ffc-ba02-4e13-87b2-5344b36778b1.jpg?v=1609804234");
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+.popular{
+    display: block;
+}
+/* Buttons */
+.mntEnterBtn, .parkEnterBtn{
+    color: green;
+    background-color: white;
+}
+.mntEnterBtn:hover, .parkEnterBtn:hover{
+    background-color:red;
+    color:green;
+}
