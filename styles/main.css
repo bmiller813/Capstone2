@@ -37,3 +37,16 @@ nav a {
     border-radius: 0.19px;
     border: 1px inset;
 }
+.home img{
+    margin-top: 6px;
+    max-width: 40vw;
+    border-radius: 6px;
+    border: 1px inset;
+    height: 200px;
+    object-fit: cover;
+}
+.home button{
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+}
