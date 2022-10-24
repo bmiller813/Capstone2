@@ -1,0 +1,13 @@
+/* This is for the JS navbar...  come back later*/
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+nav a{
+    text-decoration:none;
+    background-color: darkolivegreen;
+    color: goldenrod;
+    font-size: 2em;
+    padding: 1em;
+    margin-right: 3px;
+    border-radius: 0.25em;
+} 
