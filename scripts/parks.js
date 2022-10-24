@@ -20,15 +20,24 @@ function showCards(list, target){
 document.addEventListener("DOMContentLoaded", () => {
     const results = document.getElementById("results");
     const select = document.getElementById("location");
+    const selectType = document.getElementById("type");
+
+    function applyFilters(){
+        const v = select.selectedOptions[0].value;
+        const matches = nationalParksArray.filter(item=>item.State == v || v == "");
+
+        const v2 = selectType.selectedOptions[0].value;
+        const matches2 = matches.filter(item=>item.LocationName.toLowerCase().includes(v2) || v2 == "");
+
+        showCards(matches2, results);
+    }
 
     locationsArray.forEach(item => select.appendChild(locationOption(item)));
-
-    select.addEventListener("change", (e) => {
-       // alert(select.selectOptions[0].value)
-       const v = select.selectedOptions[0].value;
-       const matches = nationalParksArray.filter(item=>item.State == v)
-       showCards(matches, results);
-    });
+    parkTypesArray.forEach(item => selectType.appendChild(locationOption(item)))
+    
+    select.addEventListener("change", applyFilters);
+    selectType.addEventListener("change", applyFilters);
+   
 
     //SHOW ALL CARDS
    // showCards(nationalParksArray, results);
