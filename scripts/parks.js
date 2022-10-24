@@ -4,13 +4,6 @@ function locationOption(item) {
     option.innerHTML = item;
     return option;
 }
-document.addEventListener("DOMContentLoaded", () => {
-
-    const select = document.getElementById("location");
-    locationsArray.forEach(item => select.appendChild(locationOption(item)));
-    select.addEventListener("change", (e) => {
-        alert(select.selectOptions[0].value)
-    })
 
 function parkCard(item){
     const card = document.createElement("div");
@@ -18,6 +11,24 @@ function parkCard(item){
     card.innerHTML = item.LocationName;
     return card;
 }
+
+function showCards(list, target){
+    target.innerHTML = ""; //CLEAR
+    list.forEach(item => target.appendChild(parkCard(item)));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     const results = document.getElementById("results");
-    nationalParksArray.forEach(item => results.appendChild(parkCard(item)));
+    const select = document.getElementById("location");
+
+    locationsArray.forEach(item => select.appendChild(locationOption(item)));
+
+    select.addEventListener("change", (e) => {
+       // alert(select.selectOptions[0].value)
+       const v = select.selectedOptions[0].value;
+       const matches = nationalParksArray.filter(item=>item.State == v)
+       showCards(matches, results);
+    });
+
+    showCards(nationalParksArray, results);
 });
