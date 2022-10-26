@@ -1,11 +1,11 @@
 /* This is for the JS navbar...  come back later*/
 body {
     padding: 1em;
-    background-color: skyblue;
+    background-color: #2AA437;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav {
+#navL {
     display: block;
     margin: 1em;
 }
@@ -14,7 +14,7 @@ a {
     text-decoration: none;
 }
 
-nav a {
+#navL a {
     background-color: darkolivegreen;
     color: goldenrod;
     font-size: 1em;
@@ -55,4 +55,51 @@ nav a {
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/*index.css*/
+.menuBtn{
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+#menuBar1, #menuBar2, #menuBar3{
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change #menuBar1{
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change #menuBar2{
+    opacity: 0;
+}
+.change #menuBar3{
+    transform: translate(0, -11px) rotate(45deg);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar .container{
+    max-width: 100%;
+}
+.main{
+    background-image: url("https://cdn.shopify.com/s/files/1/0252/6455/4029/articles/Muir_Woods_Naitonal_Monument_Banner_Small_1c758ffc-ba02-4e13-87b2-5344b36778b1.jpg?v=1609804234");
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+/* Buttons */
+.mntEnterBtn, .parkEnterBtn{
+    color: green;
+    background-color: white;
+}
+.mntEnterBtn:hover, .parkEnterBtn:hover{
+    background-color:red;
+    color:green;
 }
