@@ -5,21 +5,27 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#navL {
+
+.nav {
     display: block;
     margin: 1em;
+    background-color: aliceblue;
 }
-
+.nav-block{
+    background-color: black;
+    padding: 0.25em 1em;
+    
+}
 a {
     text-decoration: none;
 }
 
-#navL a {
-    background-color: darkolivegreen;
+.nav a {
+    background-color: black;
     color: goldenrod;
     font-size: 1em;
-    padding: 0.25em;
-    margin-right: 1px;
+    padding: 0.25em 1em;
+    margin-left: 20px;
     border-radius: 0.25em;
     display: inline-block;
 }
@@ -58,9 +64,10 @@ a {
 }
 
 /*index.css*/
-.menuBtn{
+#nav div#menuBtn{
     display: inline-block;
     cursor: pointer;
+    background: none;
     
 }
 
@@ -89,7 +96,7 @@ a {
     max-width: 100%;
 }
 .main{
-    background-image: url("https://cdn.shopify.com/s/files/1/0252/6455/4029/articles/Muir_Woods_Naitonal_Monument_Banner_Small_1c758ffc-ba02-4e13-87b2-5344b36778b1.jpg?v=1609804234");
+    background-image: url("https://i.giphy.com/media/QTc4NvhYNlyT7Q32uj/giphy.webp");
     background-size: cover;
     width: 100%;
     height: 50vh;
