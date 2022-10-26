@@ -1,3 +1,4 @@
+const mountainsDiff = [ "Moderate", "Hardened", "Strenuous"];
 const mountainsArray = [
     {
         name: "Mt. Washington",
