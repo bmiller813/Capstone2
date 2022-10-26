@@ -30,6 +30,7 @@ function mCard(item) {
     let card;
     card = document.createElement("div");
 
+
     card.classList.add("card");
     card.innerHTML = item.name;
     return card;
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementById("results");
     const select = document.getElementById("difficulty");
 
+
     function apFilters() {
         const v = select.selectedOptions[0].value;
         const match = mountainsArray.filter(item => item.effort == v || v == "");
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //mountainsArray.forEach(m => document.body.appendChild(mountainCard(m)));
     mountainsDiff.forEach(item=> select.appendChild(diffOption(item)));
-    mountainsArray.forEach(item => document.body.appendChild(diffOption(item)));
+    //~~mountainsArray.forEach(item => document.body.appendChild(diffOption(item)));
 
     select.addEventListener("change", apFilters);
 });
