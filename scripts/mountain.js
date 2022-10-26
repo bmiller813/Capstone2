@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //mountainsArray.forEach(m => document.body.appendChild(mountainCard(m)));
     mountainsDiff.forEach(item=> select.appendChild(diffOption(item)));
-    //~~mountainsArray.forEach(item => document.body.appendChild(diffOption(item)));
+    //mountainsArray.forEach(item => document.body.appendChild(diffOption(item)));
 
     select.addEventListener("change", apFilters);
 });
