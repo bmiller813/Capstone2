@@ -19,43 +19,32 @@ function mountainCard(item) {
     return card;
 }
 
-function diffOption(item) {
+function selectMountain(item) {
     const option = document.createElement("option");
     option.value = item;
     option.innerHTML = item;
     return option;
 }
 
-function mCard(item) {
-    let card;
-    card = document.createElement("div");
-
-
-    card.classList.add("card");
-    card.innerHTML = item.name;
-    return card;
-}
-
-function sCards(list, target){
-    target.innerHTML = ""; //Clears
-    list.forEach(item => target.appendChild(mCard(item)));
-}
 
 document.addEventListener("DOMContentLoaded", () => {
-    const result = document.getElementById("results");
-    const select = document.getElementById("difficulty");
+    const results = document.getElementById("results");
+    const select = document.getElementById("chooseMount");
 
+    mountainsArray.forEach(m => select.innerHTML += `<option value="${m.name}">${m.name}</option>`);
 
-    function apFilters() {
+    function applyFilters() {
         const v = select.selectedOptions[0].value;
-        const match = mountainsArray.filter(item => item.effort == v || v == "");
+        const match = mountainsArray.find(m => v == m.name);
+        const card = mountainCard(match)
+        results.innerHTML = "";
+        card.classList.add("big");
+        results.appendChild(card);
+    };
 
-        sCards(match, result);
-    }
+    mountainsArray.forEach(m => results.appendChild(mountainCard(m)));
 
-    //mountainsArray.forEach(m => document.body.appendChild(mountainCard(m)));
-    mountainsDiff.forEach(item=> select.appendChild(diffOption(item)));
-    //mountainsArray.forEach(item => document.body.appendChild(diffOption(item)));
-
-    select.addEventListener("change", apFilters);
+    select.addEventListener("change", applyFilters);
 });
+
+
