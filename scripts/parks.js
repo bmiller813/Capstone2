@@ -47,5 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
    
 
     //SHOW ALL CARDS
-   // showCards(nationalParksArray, results);
+   showCards(nationalParksArray, results);
 });
