@@ -37,14 +37,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const v = select.selectedOptions[0].value;
         const match = mountainsArray.find(m => v == m.name);
         const card = mountainCard(match)
+        const cardImg = document.getElementsByTagName("img");
         results.innerHTML = "";
         card.classList.add("big");
+        card.setAttribute("id", "big");
+       // cardImg.setAttribute("id", "bigImg");
         results.appendChild(card);
+        
+        
     };
 
     mountainsArray.forEach(m => results.appendChild(mountainCard(m)));
 
     select.addEventListener("change", applyFilters);
 });
+
 
 

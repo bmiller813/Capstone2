@@ -10,23 +10,32 @@
     <link rel="stylesheet" href="styles/mountains.css">-->
 
     <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
-    
+
     <title>BTGMountains</title>
     <link rel="stylesheet" href="styles/main.css">
-    
+
 
     <script src="dataScripts/locationData.js"></script>
     <script src="dataScripts/mountainData.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/mountain.js"></script>
-    
+
 </head>
+
 <body>
-   <nav>
-    <div id="navL"></div>
-   </nav>
-   <h1>Mountains</h1>
-   <select id="chooseMount" value=""><option value="">Choose a Mountain!</option></select>
-   <div id="results"></div>
+    <nav id="nav" class="navbar">
+
+        <div id="menuBtn" class="menuBtn" onclick="menuBarChange(this)">
+            <div id="menuBar1" class="menuBar1"></div>
+            <div id="menuBar2" class="menuBar2"></div>
+            <div id="menuBar3" class="menuBar3"></div>
+        </div>
+    </nav>
+    <h1>Mountains</h1>
+    <select id="chooseMount" value="">
+        <option value="">Choose a Mountain!</option>
+    </select>
+    <div id="results"></div>
 </body>
+
 </html>

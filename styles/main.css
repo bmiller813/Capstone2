@@ -1,7 +1,7 @@
 /* This is for the JS navbar...  come back later*/
 body {
     padding: 1em;
-    background-color: #2AA437;
+    background-color: #AAF210;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -12,9 +12,13 @@ body {
     background-color: aliceblue;
 }
 .nav-block{
-    background-color: black;
-    padding: 0.25em 1em;
-    
+    color:#333;
+    background-color: #2CAB15;
+    padding: 0.25em 1em;  
+}
+.nav-block:hover{
+    background-color: darkgreen;
+    color:#AAF210;
 }
 a {
     text-decoration: none;
@@ -32,10 +36,10 @@ a {
 
 .card {
     margin: 3px 9px 9px 3px;
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 1rem;
     width: 160px;
-    height: 80px;
+   
     min-height: 80px;
     display: inline-flex;
     box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5);
@@ -107,6 +111,29 @@ a {
     background-color: white;
 }
 .mntEnterBtn:hover, .parkEnterBtn:hover{
-    background-color:red;
+    background-color:#2CAB15;
     color:green;
+}
+#location, #type{
+    color:#2CAB15
+}
+#displayAll{
+    color:#2CAB15;
+}
+#displayAll:hover{
+    background-color: green;
+}
+/*National Park*/
+
+/*National Images*/
+.col, .nImage{
+    border-radius: 500px;
+    max-height: 300%;
+    max-width: 200%;
+    padding: 20%;
+}
+#big{
+    
+    width: 100%;
+    
 }

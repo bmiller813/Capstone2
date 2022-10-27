@@ -7,10 +7,10 @@
     <!--<link rel="stylesheet" href="styles/mountains.css">-->
 
     <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
-    
+
     <title>BryanInn</title>
     <script src="scripts/main.js"></script>
-   <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 
     <script src="dataScripts/locationData.js"></script>
     <script src="dataScripts/nationalParkData.js"></script>
@@ -20,7 +20,7 @@
 
 <body>
 
-   <!-- <nav id="nav" class="navbar navbar-expand-lg">
+    <!-- <nav id="nav" class="navbar navbar-expand-lg">
         <div class="container">
             <div id="menuBtn" class="menuBtn" onclick="menuBarChange(this)">
                 <div id="menuBar1" class="menuBar1"></div>
@@ -48,11 +48,56 @@
         </div>
     </nav>-->
     <!--            SEARCH AND ETC              -->
-    <!--<nav id="nav"></nav>-->
-    <h1>National Parks</h1>
-    <select id="location" value=""><option>Select a Location</option></select>
-    <select id="type" value=""><option value="">Select a Type</option></select>
-    <div id="results"></div>
+    <nav id="nav" class="navbar">
+
+        <div id="menuBtn" class="menuBtn" onclick="menuBarChange(this)">
+            <div id="menuBar1" class="menuBar1"></div>
+            <div id="menuBar2" class="menuBar2"></div>
+            <div id="menuBar3" class="menuBar3"></div>
+        </div>
+    </nav>
+    <section>
+        <div id="nationalFacts">
+            <h1>National Facts!</h1>
+            <p>
+                There are so many benefits to visiting National Parks and these benefits
+                are both us and our environment.
+            </p>
+            <div id="npBen">
+                <p> - Reduced Stress! </p>
+                <p> - Improved Sleep! </p>
+                <p> -Enhanced Cognition! </p>
+                <p> - Protection against natural diversity! </p>
+                <p> - Provide renewable energy! </p>
+            </div>
+            <div class="row pt-5 g-2">
+                <div class="col-lg-3 mix all">
+                    <img class="nImage"
+                        src="https://inhabitat.com/wp-content/blogs.dir/1/files/2019/05/shutterstock_632941031-600x480.jpg">
+                </div>
+                <div class="col-lg-3 mix all">
+                    <img class="nImage"
+                        src="https://www.tamborasi.com/wp-content/uploads/2021/06/national-parks-benefits-bree.jpg">
+                </div>
+                <div class="col-lg-3 mix all">
+                    <img class="nImage"
+                        src="https://www.tamborasi.com/wp-content/uploads/2021/06/national-parks-benefits-yellowstone.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Find Your National Parks!</h2>
+        <select id="location" value="">
+            <option>Select a Location</option>
+        </select>
+        <select id="type" value="">
+            <option value="">Select a Type</option>
+        </select>
+        <button id="displayAll">Display All</button>
+        <div id="results"></div>
+    </section>
+
 </body>
 
 </html>
