@@ -28,15 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const results = document.getElementById("results");
     const select = document.getElementById("location");
     const selectType = document.getElementById("type");
+    const search = document.getElementById("search");
 
     function applyFilters(){
         const v = select.selectedOptions[0].value;
         const matches = nationalParksArray.filter(item=>item.State == v || v == "");
 
         const v2 = selectType.selectedOptions[0].value;
-        const matches2 = matches.filter(item=>item.LocationName.toLowerCase().includes(v2) || v2 == "");
+        const matches2 = matches.filter(item=>item.LocationName.toLowerCase().includes(v2.toLowerCase()) || v2 == "");
 
-        showCards(matches2, results);
+        const v3 = search.value;
+        //just location
+        const matches3 = matches2.filter(item=>item.LocationName.toLowerCase().includes(v3.toLowerCase()) || v3 == "");
+        //whole object
+        //const matches3 = matches2.filter(item=>JSON.stringify(item).toLowerCase().includes(v3.toLowerCase()) || v3 == "");
+        showCards(matches3, results);
     }
 
     locationsArray.forEach(item => select.appendChild(locationOption(item)));
@@ -44,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     select.addEventListener("change", applyFilters);
     selectType.addEventListener("change", applyFilters);
+    search.addEventListener("keyup", applyFilters);
    
 
     //SHOW ALL CARDS
