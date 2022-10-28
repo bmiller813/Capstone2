@@ -109,7 +109,10 @@ a {
 .mntEnterBtn, .parkEnterBtn{
     color: green;
     background-color: white;
+    display:inline-block;
+    object-fit: cover;
 }
+
 .mntEnterBtn:hover, .parkEnterBtn:hover{
     background-color:#2CAB15;
     color:green;
@@ -123,6 +126,7 @@ a {
 #displayAll:hover{
     background-color: green;
 }
+
 /*National Park*/
 
 /*National Images*/
@@ -136,4 +140,47 @@ a {
     
     width: 100%;
     
+}
+
+/*=====================Bottom=======================*/
+.news{
+    
+    font-family: 'prompt' , sans-serif;
+}
+.news a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.news a:hover{
+    color: white;
+    padding-left: 5px;
+    
+}
+.btns{
+    height: 50px;
+    width: 30%;
+    border: none;
+    outline: none;
+    background: black;
+    font-weight: bold;
+    color:darkgreen;
+}
+.sub{
+    height: 50px;
+    width: 70%;
+    background: transparent;
+    outline: none;
+    border: 1px solid black;
+    color: black;
+}
+
+.Copy{
+    color:rgb(53, 49, 49);
+
+}
+.filter{
+    background: #0a0a0a;
 }

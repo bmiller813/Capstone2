@@ -10,12 +10,28 @@ function mountainTitle(item) {
     text.innerHTML = item.name;
     return text;
 }
+function mountainElevation(item) {
+    const text = document.createElement("div");
+    text.classList.add("card-subtitle");
+    text.innerHTML = item.elevation;
+    return text;
+}
+function mountainDesc(item) {
+    const text = document.createElement("div");
+    text.classList.add("card-body");
+    text.innerHTML = item.desc;
+    return text;
+}
+
 
 function mountainCard(item) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.appendChild(mountainImage(item));
     card.appendChild(mountainTitle(item));
+    card.appendChild(mountainElevation(item));
+    card.appendChild(mountainDesc(item));
+    
     return card;
 }
 
@@ -37,20 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const v = select.selectedOptions[0].value;
         const match = mountainsArray.find(m => v == m.name);
         const card = mountainCard(match)
-        const cardImg = document.getElementsByTagName("img");
+       // const cardImg = document.getElementsByTagName("img");
         results.innerHTML = "";
         card.classList.add("big");
         card.setAttribute("id", "big");
        // cardImg.setAttribute("id", "bigImg");
         results.appendChild(card);
         
-        
     };
 
     mountainsArray.forEach(m => results.appendChild(mountainCard(m)));
-
     select.addEventListener("change", applyFilters);
 });
 
+//WHOLE OTHER SECTION
 
 
