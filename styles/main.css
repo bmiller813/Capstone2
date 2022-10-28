@@ -184,3 +184,8 @@ a {
 .filter{
     background: #0a0a0a;
 }
+
+.card-description{
+    max-height: 1000px;
+    
+}
